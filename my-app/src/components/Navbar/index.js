@@ -7,6 +7,14 @@ function Navbar() {
     <nav className="navbar navbar-dark bg-dark">
       <div>
         <ul className="navbar-nav">
+        <li className="nav-item">
+            <Link
+              to="/home"
+              className={window.location.pathname === "/home" ? "nav-link active" : "nav-link"}
+            >
+              Home
+            </Link>
+          </li>
           <li className="nav-item">
             <Link
               to="/employees"
@@ -22,23 +30,7 @@ function Navbar() {
             >
               Search Employee
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/searchDepartment"
-              className={window.location.pathname === "/searchDepartment" ? "nav-link active" : "nav-link"}
-            >
-              Search by Department
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/searchRole"
-              className={window.location.pathname === "/searchRole" ? "nav-link active" : "nav-link"}
-            >
-              Search by Role
-            </Link>
-          </li>
+        </li>
         </ul>
       </div>
     </nav>
